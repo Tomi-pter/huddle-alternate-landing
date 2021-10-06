@@ -1,8 +1,306 @@
-/*.attribution {
-    font-size: 11px;
+@font-face {
+    font-family: 'PoppinsSemiBold';
+    src: url('fonts/PoppinsSemiBold.eot');
+    src: url('fonts/PoppinsSemiBold.eot') format('embedded-opentype'), url('fonts/PoppinsSemiBold.woff2') format('woff2'), url('fonts/PoppinsSemiBold.woff') format('woff'), url('fonts/PoppinsSemiBold.ttf') format('truetype'), url('fonts/PoppinsSemiBold.svg#PoppinsSemiBold') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansRegular';
+    src: url('fonts/OpenSansRegular.eot');
+    src: url('fonts/OpenSansRegular.eot') format('embedded-opentype'), url('fonts/OpenSansRegular.woff2') format('woff2'), url('fonts/OpenSansRegular.woff') format('woff'), url('fonts/OpenSansRegular.ttf') format('truetype'), url('fonts/OpenSansRegular.svg#OpenSansRegular') format('svg');
+}
+
+@font-face {
+    font-family: 'OpenSansBold';
+    src: url('fonts/OpenSansBold.eot');
+    src: url('fonts/OpenSansBold.eot') format('embedded-opentype'), url('fonts/OpenSansBold.woff2') format('woff2'), url('fonts/OpenSansBold.woff') format('woff'), url('fonts/OpenSansBold.ttf') format('truetype'), url('fonts/OpenSansBold.svg#OpenSansBold') format('svg');
+}
+
+:root {
+    --pink: hsl(322, 100%, 66%);
+    --pale-cyan: hsl(193, 100%, 96%);
+    --dark-cyan: hsl(192, 100%, 9%);
+    --grayish-blue: hsl(208, 11%, 55%);
+    --font-size: 18px;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size);
+}
+
+h1,
+h2 {
+    font-family: 'PoppinsSemiBold';
+}
+
+p,
+li {
+    font-family: 'OpenSansRegular';
+}
+
+a {
+    font-family: 'OpenSansBold';
+    text-decoration: none;
+    display: block;
+}
+
+header {
+    background: url(images/bg-hero-mobile.svg) no-repeat;
+    background-color: var(--pale-cyan);
+    color: var(--dark-cyan);
+    text-align: center;
+    font-family: 'OpenSansRegular';
+}
+
+.logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 1rem;
+}
+
+.logo img {
+    max-width: 8rem;
+    height: 1.25rem;
+}
+
+.logo a {
+    background-color: white;
+    font-size: .8em;
+    padding: .5rem 2rem;
+    border-radius: 1.5rem;
+    color: var(--dark-cyan);
+    box-shadow: 0 2px 5px hsl(192, 100%, 9%, .3);
+}
+
+.head {
+    max-width: 85%;
+    margin: 3rem auto;
+}
+
+.head h1 {
+    font-size: 1.7rem;
+}
+
+.head p {
+    font-size: .9em;
+}
+
+.head>img {
+    max-width: 18rem;
+}
+
+.head a,
+.position a {
+    font-size: .8em;
+    background-color: var(--pink);
+    padding: 1rem;
+    margin: 2.5rem auto;
+    width: 80%;
+    border-radius: 2rem;
+    color: var(--pale-cyan);
+    box-shadow: 0 2px 5px hsl(322, 100%, 66%, .5);
+}
+
+main {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
     text-align: center;
 }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
-}*/
+.cards {
+    border-radius: 1rem;
+    background-color: white;
+    margin: 2rem auto 1rem;
+    padding: 1.5rem;
+    max-width: 85%;
+    /*box-shadow: 0 5px 10px hsl(192, 100%, 9%, .1);*/
+    filter: drop-shadow(3px 3px 3px hsl(192, 100%, 9%, .05)) drop-shadow(-3px -3px 3px hsl(192, 100%, 9%, .05));
+}
+
+.cards img {
+    max-width: 15rem;
+}
+
+.position {
+    border-radius: 1rem;
+    background-color: white;
+    margin: 2rem auto 1rem;
+    max-width: 90%;
+    filter: drop-shadow(3px 0 3px hsl(192, 100%, 9%, .05)) drop-shadow(-3px -3px 3px hsl(192, 100%, 9%, .05));
+    padding: 1rem 1rem 0;
+    position: relative;
+    top: 5rem;
+}
+
+.position h2 {
+    font-size: 1.3em;
+}
+
+.position a {
+    width: 70%;
+    margin: 2rem auto;
+}
+
+footer {
+    background-color: var(--dark-cyan);
+    color: var(--pale-cyan);
+}
+
+footer>div {
+    margin: 0 1.5rem;
+}
+
+footer img {
+    max-width: 12rem;
+    margin: 8rem 0 1rem;
+    filter: brightness(0) invert(1);
+}
+
+.info>p {
+    display: flex;
+}
+
+.info>p:nth-child(2)::before {
+    content: url(images/icon-location.svg);
+    margin-right: 1rem;
+}
+
+.info>p:nth-child(3)::before {
+    content: url(images/icon-phone.svg);
+    margin-right: 1rem;
+}
+
+.info>p:nth-child(4)::before {
+    content: url(images/icon-email.svg);
+    margin-right: 1rem;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    line-height: 2.5;
+    margin-top: 3rem;
+    width: fit-content;
+}
+
+ul a {
+    color: var(--pale-cyancyan);
+}
+
+.social {
+    text-align: center;
+}
+
+.social p {
+    font-size: .6em;
+    margin: 2rem 0 3rem;
+}
+
+.social a {
+    border-radius: 50%;
+    width: 35px;
+    border: 1px solid whitesmoke;
+    margin: 0 .25rem;
+    padding: .5rem;
+    color: white;
+}
+
+.social a:hover {
+    color: var(--pink);
+    border-color: var(--pink);
+}
+
+.logo a:hover,
+.head a:hover,
+.position a:hover {
+    opacity: .5;
+}
+
+ul a:hover {
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 900px) {
+    header {
+        background: url(images/bg-hero-desktop.svg) no-repeat;
+        background-color: var(--pale-cyan);
+        text-align: left;
+    }
+    .logo {
+        margin: 2rem 2.5rem;
+    }
+    .head {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 90%;
+        align-items: center;
+        column-gap: 2rem;
+    }
+    .head>img {
+        max-width: 30rem;
+    }
+    .head a {
+        text-align: center;
+        margin: .5rem 0;
+        width: 50%;
+    }
+    main {
+        text-align: left;
+    }
+    .cards {
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 5rem;
+        padding: 4rem;
+    }
+    .flow {
+        flex-direction: row;
+    }
+    .position {
+        text-align: center;
+        padding: 1rem 6rem 0;
+    }
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin-bottom: 2rem;
+        font-size: .9rem;
+    }
+    .info {
+        margin-right: 2rem;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-content: center;
+        column-gap: 4rem;
+        height: 10rem;
+        margin-top: 8rem;
+    }
+    .social {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 8rem;
+    }
+    .social p {
+        margin: 11rem 0 0;
+    }
+    .social a {
+        width: 32.5px;
+    }
+}
