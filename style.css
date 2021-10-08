@@ -22,6 +22,7 @@
     --dark-cyan: hsl(192, 100%, 9%);
     --grayish-blue: hsl(208, 11%, 55%);
     --font-size: 18px;
+    --max-width: 1440px;
 }
 
 *,
@@ -111,6 +112,11 @@ header {
     box-shadow: 0 2px 5px hsl(322, 100%, 66%, .5);
 }
 
+.wrapper {
+    max-width: var(--max-width);
+    margin: auto;
+}
+
 main {
     margin: auto;
     display: flex;
@@ -139,7 +145,7 @@ main {
     margin: 2rem auto 1rem;
     max-width: 90%;
     filter: drop-shadow(3px 0 3px hsl(192, 100%, 9%, .05)) drop-shadow(-3px -3px 3px hsl(192, 100%, 9%, .05));
-    padding: 1rem 1rem 0;
+    padding: 1rem 1rem;
     position: relative;
     top: 5rem;
 }
@@ -234,7 +240,7 @@ ul a:hover {
 
 @media (min-width: 620px) and (max-width: 999px) {
     .position {
-        padding: 1rem 5rem 0;
+        padding: 1rem 5rem;
     }
 }
 
@@ -252,6 +258,7 @@ ul a:hover {
         grid-template-columns: 1fr 1fr;
         max-width: 90%;
         align-items: center;
+        justify-items: center;
         column-gap: 2rem;
     }
     .head>img {
@@ -260,7 +267,7 @@ ul a:hover {
     .head a {
         text-align: center;
         margin: .5rem 0;
-        width: 50%;
+        max-width: 45%;
     }
     main {
         text-align: left;
@@ -275,7 +282,7 @@ ul a:hover {
         flex-direction: row;
     }
     .position {
-        padding: 1rem 6rem 0;
+        padding: 1rem 6rem;
     }
     .container {
         display: grid;
