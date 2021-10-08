@@ -230,7 +230,7 @@ ul a:hover {
     text-decoration: underline;
 }
 
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 1000px) {
     header {
         background: url(images/bg-hero-desktop.svg) no-repeat;
         background-color: var(--pale-cyan);
@@ -306,3 +306,13 @@ ul a:hover {
         width: 32.5px;
     }
 }
+
+
+/*.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}*/
